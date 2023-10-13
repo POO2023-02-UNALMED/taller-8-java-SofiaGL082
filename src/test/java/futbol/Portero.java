@@ -24,6 +24,7 @@ public class Portero extends Futbolista {
 		return mensaje;
 	}
 	
+	@Override
 	public int compareTo(Futbolista f) {
 		Portero p = (Portero)f; 
 		if (this.golesRecibidos>p.golesRecibidos) {
