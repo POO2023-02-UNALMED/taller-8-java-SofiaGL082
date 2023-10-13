@@ -33,8 +33,9 @@ public class Jugador extends Futbolista {
 	}
 	
 	@Override
-	public int compareTo(Futbolista f) {
+	public int compareTo(Object o) {
 		//entrega la dif de edad positiva entre el this y f
+		Futbolista f = (Futbolista)o;
 		if (this.getEdad()>f.getEdad()) {
 			return this.getEdad() - f.getEdad();
 		} else if (this.getEdad()<f.getEdad()) {
