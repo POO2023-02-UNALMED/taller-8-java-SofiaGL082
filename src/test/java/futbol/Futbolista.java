@@ -49,14 +49,12 @@ public abstract class Futbolista implements Comparable<Futbolista> {
 		return respuesta;
 	}
 	
+	@Override
 	public int compareTo(Futbolista f) {
-		if (this.getEdad()>f.getEdad()) {
-			return 1;
-		}else if (this.getEdad()<f.getEdad()) {
-			return -1;
-		}else {
-			return 0;
-		}
+	    if (this.getEdad() != f.getEdad()) {
+	        return this.getEdad() - f.getEdad();
+	    }
+	    return this.getNombre().compareTo(f.getNombre());
 	}
 	
 	public abstract boolean jugarConLasManos();
