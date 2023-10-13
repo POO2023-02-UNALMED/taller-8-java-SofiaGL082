@@ -42,11 +42,11 @@ public abstract class Futbolista implements Comparable<Object> {
 	
 	public boolean equals(Futbolista f) {
 		//ver si dos objetos son iguales
-		boolean respuesta = false;
 		if ((this.getNombre()==f.getNombre()) && (this.getEdad()==f.getEdad()) && (this.getPosicion()==f.getPosicion())) {
-			respuesta = true;
+			return true;
+		} else {
+			return false;
 		}
-		return respuesta;
 	}
 	
 	public int compareTo(Object o) {
